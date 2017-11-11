@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/court_basket"
+    android:scaleType="centerCrop">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="550dp"
+    android:orientation="horizontal">
+
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/team_a_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        android:padding="4dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ 3 points"
+        android:layout_margin="8dp"
+        android:onClick="addThreeForTeamA"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ 2 points"
+        android:layout_margin="8dp"
+        android:onClick="addTwoForTeamA"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Free Throw"
+        android:layout_margin="8dp"
+        android:onClick="addOneForTeamA"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shot Statistics"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/three_point_shot_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Three points : "
+        android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/increment_three_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0 "
+            android:padding="8dp"
+            android:layout_toRightOf="@id/three_point_shot_a"/>
+
+    <TextView
+        android:id="@+id/two_point_shot_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two points : "
+        android:padding="8dp"
+        android:layout_below="@id/three_point_shot_a"/>
+
+        <TextView
+            android:id="@+id/increment_two_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/three_point_shot_a"
+            android:layout_toEndOf="@+id/three_point_shot_a"
+            android:layout_toRightOf="@+id/three_point_shot_a"
+            android:padding="8dp"
+            android:text=" 0 " />
+
+    <TextView
+        android:id="@+id/free_shot_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Free Throws : "
+        android:padding="8dp"
+        android:layout_below="@id/two_point_shot_a"/>
+
+        <TextView
+            android:id="@+id/increment_one_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/increment_two_a"
+            android:layout_alignStart="@+id/increment_two_a"
+            android:layout_below="@+id/increment_two_a"
+            android:padding="8dp"
+            android:text=" 0 " />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.courtcounter.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Team B"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:padding="4dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ 3 points"
+            android:layout_margin="8dp"
+            android:onClick="addThreeForTeamB"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ 2 points"
+            android:layout_margin="8dp"
+            android:onClick="addTwoForTeamB"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Free Throw"
+            android:layout_margin="8dp"
+            android:onClick="addOneForTeamB"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shot Statistics"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/three_point_shot_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Three points : "
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/increment_three_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0 "
+                android:padding="8dp"
+                android:layout_toRightOf="@id/three_point_shot_b"/>
+
+            <TextView
+                android:id="@+id/two_point_shot_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two points : "
+                android:padding="8dp"
+                android:layout_below="@id/three_point_shot_b"/>
+
+            <TextView
+                android:id="@+id/increment_two_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/increment_three_b"
+                android:layout_toEndOf="@+id/three_point_shot_b"
+                android:layout_toRightOf="@+id/three_point_shot_b"
+                android:padding="8dp"
+                android:text=" 0 " />
+
+            <TextView
+                android:id="@+id/free_shot_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Throws : "
+                android:padding="8dp"
+                android:layout_below="@id/two_point_shot_b"/>
+
+            <TextView
+                android:id="@+id/increment_one_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 0 "
+                android:padding="8dp"
+                android:layout_toRightOf="@id/free_shot_b"
+                android:layout_below="@id/two_point_shot_b"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:onClick="resetScore"/>
+
+    </LinearLayout>
+
+</LinearLayout>
